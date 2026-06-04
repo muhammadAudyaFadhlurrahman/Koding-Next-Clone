@@ -1,0 +1,708 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koding Next Clone</title>
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./media/ikon-2.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar-custom">
+      <!-- Hamburger Mobile -->
+      <button
+        class="navbar-toggler custom-toggler"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#mobileMenu"
+        aria-controls="mobileMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="./media/kodingnext.png" alt="Koding Next" />
+      </div>
+
+      <!-- Menu Desktop -->
+      <div class="nav-container desktop-menu">
+        <div class="nav-row">
+          <a href="#">Holiday Camp</a>
+
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+              Kursus
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Coding</a></li>
+              <li><a class="dropdown-item" href="#">Robotics</a></li>
+              <li><a class="dropdown-item" href="#">AI</a></li>
+            </ul>
+          </div>
+
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+              Program Sekolah
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">SD</a></li>
+              <li><a class="dropdown-item" href="#">SMP</a></li>
+              <li><a class="dropdown-item" href="#">SMA</a></li>
+            </ul>
+          </div>
+
+          <a href="#">Franchise</a>
+
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+              Kompetisi
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">National</a></li>
+              <li><a class="dropdown-item" href="#">International</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nav-row second-row">
+          <a href="#">Lokasi</a>
+
+          <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown">
+              Tentang Kami
+            </a>
+
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profil</a></li>
+              <li><a class="dropdown-item" href="#">Karir</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Desktop Right -->
+      <div class="nav-right desktop-menu">
+        <a
+          href="#"
+          class="btn-free"
+          data-bs-toggle="modal"
+          data-bs-target="#trialModal"
+        >
+          GRATIS Kelas Pertama
+        </a>
+
+        <div class="dropdown">
+          <button
+            class="btn lang-btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            <img
+              src="https://flagcdn.com/w40/id.png"
+              alt="Indonesia"
+              class="flag"
+            />
+          </button>
+
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="https://flagcdn.com/w40/id.png" class="flag-small" />
+                Indonesia
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="https://flagcdn.com/w40/gb.png" class="flag-small" />
+                English
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Offcanvas Start -->
+    <div
+      class="offcanvas offcanvas-start mobile-menu"
+      tabindex="-1"
+      id="mobileMenu"
+    >
+      <div class="offcanvas-header">
+        <h5>Koding Next</h5>
+
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+
+      <div class="offcanvas-body">
+        <a href="#">Holiday Camp</a>
+        <a href="#">Kursus</a>
+        <a href="#">Program Sekolah</a>
+        <a href="#">Franchise</a>
+        <a href="#">Kompetisi</a>
+        <a href="#">Lokasi</a>
+        <a href="#">Tentang Kami</a>
+
+        <hr />
+
+        <a href="#" class="btn-abtn-free"> GRATIS Kelas Pertama </a>
+
+        <div class="dropdown mt-3">
+          <button
+            class="btn lang-btn dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+          >
+            <img
+              src="https://flagcdn.com/w40/id.png"
+              alt="Indonesia"
+              class="flag"
+            />
+          </button>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="https://flagcdn.com/w40/id.png" class="flag-small" />
+                Indonesia
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="#">
+                <img src="https://flagcdn.com/w40/gb.png" class="flag-small" />
+                English
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Offcanvas End -->
+
+    <!-- Hero Section Start -->
+    <section class="hero">
+      <div class="hero-left">
+        <h5>Sekolah Koding, Robotik dan AI</h5>
+
+        <h1>
+          Menginspirasi<br />
+          Generasi Muda<br />
+          Masa Depan
+        </h1>
+
+        <p>
+          Kenalkan Lukasz Sitko, peneliti NASA yang bergabung dengan Koding Next
+          untuk menginspirasi anak-anak.
+        </p>
+
+        <a href="#" class="hero-btn"> Daftar Kelas Koding </a>
+      </div>
+    </section>
+    <!-- Hero Section End-->
+
+    <!-- Section About-Us Start -->
+    <section
+      id="about-us"
+      class="d-flex justify-content-center text-center py-5"
+    >
+      <div class="about">
+        <h1>Hi, Kami <span>Koding Next!</span></h1>
+        <p>
+          Misi kami memberdayakan generasi inovator teknologi berikutnya melalui
+          kurikulum coding kami yang luar biasa yang menginspirasi kreativitas
+          dan keterampilan pemecahan masalah. Berdiri sejak 2016, rekam jejak
+          kami sudah terbukti.
+        </p>
+      </div>
+    </section>
+    <!-- Section About Us End -->
+
+    <!-- Section Learn About Start -->
+    <section
+      id="learn-about"
+      class="d-flex justify-content-center text-center py-5"
+    >
+      <div class="learn-about">
+        <h1>Belajar Apa di <span>Koding Next?</span></h1>
+
+        <div class="learn-box">
+          <div class="learn-card">
+            <img src="./media/coding.jpg" alt="Coding" />
+            <div class="card-body">
+              <p>Programming & Coding</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/robotics.jpg" alt="Robotics" />
+            <div class="card-body">
+              <p>Robotics Engineering</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/ai.jpg" alt="AI" />
+            <div class="card-body">
+              <p>Artificial Intelligence</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/game.jpg" alt="Game Development" />
+            <div class="card-body">
+              <p>Game Development</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/web.jpg" alt="Web Development" />
+            <div class="card-body">
+              <p>Web Development</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/python.jpg" alt="Python" />
+            <div class="card-body">
+              <p>Python Programming</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/minecraft.jpg" alt="Minecraft" />
+            <div class="card-body">
+              <p>Minecraft Education</p>
+            </div>
+          </div>
+
+          <div class="learn-card">
+            <img src="./media/data.jpg" alt="Data Science" />
+            <div class="card-body">
+              <p>Data Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Section Learn About End -->
+
+    <!-- Station Section Start -->
+    <section class="station-section">
+      <h2>Terekam di:</h2>
+
+      <div class="logo-slider">
+        <div class="logo-track">
+          <!-- Logo Set 1 -->
+          <img src="./media/tvone.png" alt="TV One" />
+          <img src="./media/suara.png" alt="Suara" />
+          <img src="./media/sindo.png" alt="Sindo" />
+          <img src="./media/mommies.png" alt="Mommies Daily" />
+          <img src="./media/mediaindonesia.png" alt="Media Indonesia" />
+          <img src="./media/detik.png" alt="Detik" />
+          <img src="./media/jakarta.png" alt="Jakarta Post" />
+
+          <!-- Duplikat agar looping mulus -->
+          <img src="./media/tvone.png" alt="TV One" />
+          <img src="./media/suara.png" alt="Suara" />
+          <img src="./media/sindo.png" alt="Sindo" />
+          <img src="./media/mommies.png" alt="Mommies Daily" />
+          <img src="./media/mediaindonesia.png" alt="Media Indonesia" />
+          <img src="./media/detik.png" alt="Detik" />
+          <img src="./media/jakarta.png" alt="Jakarta Post" />
+        </div>
+      </div>
+    </section>
+    <!-- Station Section End -->
+
+    <!-- Detail Section Start -->
+    <section class="stats-section py-5">
+      <div class="container">
+        <div class="row text-center g-5">
+          <div class="col-md-4 col-6">
+            <div class="stat-item">
+              <h2>100,000+</h2>
+              <p>Dipercaya Orangtua</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-6">
+            <div class="stat-item">
+              <h2>51,000+</h2>
+              <p>Kursus Terjual</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-6">
+            <div class="stat-item">
+              <h2>3,600+</h2>
+              <p>Pengajar Terlatih</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-6">
+            <div class="stat-item">
+              <h2>60+</h2>
+              <p>Mitra Sekolah</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-6">
+            <div class="stat-item">
+              <h2>35+</h2>
+              <p>Lokasi</p>
+            </div>
+          </div>
+
+          <div class="col-md-4 col-6">
+            <div class="stat-item">
+              <h2>9+</h2>
+              <p>Tahun Pengalaman</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Detail Section End -->
+
+    <!-- Partner Section Start -->
+    <section
+      id="partner-section"
+      class="d-flex justify-content-center text-center py-5"
+    >
+      <div class="partner-section">
+        <h1><span>Mitra</span> kami:</h1>
+
+        <div class="partner-box">
+          <div class="partner-card">
+            <img src="./media/coding.jpg" alt="Coding" />
+            <div class="card-body">
+              <p>Programming & Coding</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/robotics.jpg" alt="Robotics" />
+            <div class="card-body">
+              <p>Robotics Engineering</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/ai.jpg" alt="AI" />
+            <div class="card-body">
+              <p>Artificial Intelligence</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/game.jpg" alt="Game Development" />
+            <div class="card-body">
+              <p>Game Development</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/web.jpg" alt="Web Development" />
+            <div class="card-body">
+              <p>Web Development</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/python.jpg" alt="Python" />
+            <div class="card-body">
+              <p>Python Programming</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/minecraft.jpg" alt="Minecraft" />
+            <div class="card-body">
+              <p>Minecraft Education</p>
+            </div>
+          </div>
+
+          <div class="partner-card">
+            <img src="./media/data.jpg" alt="Data Science" />
+            <div class="card-body">
+              <p>Data Science</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partner Section End -->
+
+    <!-- School Partner Start -->
+    <section class="school-partner-section">
+      <div class="container">
+        <h1 class="school-partner-title">Mitra <span>Sekolah</span> Kami</h1>
+
+        <div
+          class="row justify-content-center align-items-center g-5 school-partner-logos"
+        >
+          <div class="col-lg-2 col-md-3 col-4">
+            <img src="./media/hero-section.png" class="img-fluid" alt="" />
+          </div>
+
+          <!-- Logo lainnya -->
+        </div>
+
+        <div class="school-partner-description">
+          <p>
+            Dengan lebih dari
+            <span>60 kemitraan sekolah di seluruh Indonesia</span>, kami bangga
+            dapat membantu membekali generasi muda dengan skill yang dibutuhkan
+            di era digital. Bergabunglah bersama kami dalam mempersiapkan
+            siswa-siswi untuk menghadapi masa depan.
+          </p>
+
+          <a href="#" class="school-partner-btn"> Selengkapnya </a>
+        </div>
+      </div>
+    </section>
+    <!-- School Partner End -->
+
+    <!-- Testimonial Start -->
+    <section
+      id="testimonial-section"
+      class="d-flex justify-content-center text-center py-5"
+    >
+      <div class="testimonial-section">
+        <h1><span>Apa Kata Mereka?</span></h1>
+
+        <div class="testimonial-box">
+          <div class="testimonial-card">
+            <img src="./media/user1.jpg" alt="User" />
+
+            <h4>Budi Santoso</h4>
+
+            <small>Orang Tua Murid</small>
+
+            <p>
+              Anak saya menjadi lebih percaya diri dan mulai tertarik dengan
+              dunia teknologi sejak belajar di Koding Next.
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <img src="./media/user2.jpg" alt="User" />
+
+            <h4>Siti Rahma</h4>
+
+            <small>Orang Tua Murid</small>
+
+            <p>
+              Kurikulumnya sangat menarik dan mudah dipahami. Mentor juga sangat
+              sabar dalam mengajar.
+            </p>
+          </div>
+
+          <div class="testimonial-card">
+            <img src="./media/user3.jpg" alt="User" />
+
+            <h4>Andi Wijaya</h4>
+
+            <small>Siswa Robotics</small>
+
+            <p>
+              Saya berhasil membuat proyek robot pertama saya dan mengikuti
+              kompetisi berkat bimbingan mentor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial End -->
+
+    <!-- Floating Button -->
+    <a
+      href="https://wa.me/6287873654451?text=Halo%20bisakah%20saya%20mendapatkan%20info%20lebih%20lanjut?"
+      class="floating-btn"
+      target="_blank"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Modal Form Pendaftaran Start -->
+    <div class="modal fade" id="trialModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body p-0">
+            <section class="trial-popup">
+              <div class="trial-left">
+                <h2>
+                  <span>Daftar</span><br />
+                  Kelas Trial<br />
+                  Gratis
+                </h2>
+              </div>
+
+              <div class="trial-right">
+                <form>
+                  <div class="mb-3">
+                    <label>Nama Orangtua *</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="contoh: Lisa Valencia"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label>Email Orangtua *</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="contoh: lisavalencia@gmail.com"
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label>Nomor WhatsApp Orangtua *</label>
+                    <input type="tel" class="form-control" />
+                  </div>
+
+                  <div class="mb-3">
+                    <label>Usia Anak *</label>
+                    <select class="form-control">
+                      <option>4-16 tahun</option>
+                    </select>
+                  </div>
+
+                  <div class="mb-3">
+                    <label>Pilih Kursus *</label>
+
+                    <div class="d-flex gap-4 mt-2">
+                      <label>
+                        <input type="radio" name="kursus" />
+                        Koding Next
+                      </label>
+
+                      <label>
+                        <input type="radio" name="kursus" />
+                        RoboNext
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label>Kota Domisili *</label>
+                    <input type="text" class="form-control" />
+                  </div>
+
+                  <button type="submit" class="btn-submit">Submit</button>
+                </form>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Form Pendaftaran End -->
+
+    <!-- Footer -->
+    <footer class="kn-footer">
+      <div class="container">
+        <div class="kn-footer-box">
+          <div class="row g-5">
+            <!-- Logo & Menu -->
+            <div class="col-lg-3 col-md-6">
+              <img
+                src="./media/kodingnext.png"
+                alt="Logo"
+                class="kn-footer-logo"
+              />
+
+              <ul class="kn-footer-menu">
+                <li><a href="#">Kursus</a></li>
+                <li><a href="#">Program Sekolah</a></li>
+                <li><a href="#">Waralaba</a></li>
+                <li><a href="#">Kompetisi</a></li>
+                <li><a href="#">Lokasi</a></li>
+                <li><a href="#">Tentang Kami</a></li>
+                <li><a href="#">Karir</a></li>
+              </ul>
+            </div>
+
+            <!-- Media Sosial -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="kn-footer-title">MEDIA SOSIAL</h4>
+
+              <ul class="kn-footer-menu">
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Youtube</a></li>
+                <li><a href="#">LinkedIn</a></li>
+              </ul>
+            </div>
+
+            <!-- Lokasi -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="kn-footer-title">LOKASI</h4>
+
+              <div class="kn-footer-address">
+                <strong>Koding Next Headquarter</strong>
+
+                <p>
+                  The Mansion Bougenville, Fontana Jl. Trembesi, Pademangan
+                  Timur, Jakarta Utara - 14410
+                </p>
+
+                <p>
+                  info@kodingnext.com<br />
+                  Tel. (021) 22604616
+                </p>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-lg-3 col-md-6">
+              <h4 class="kn-footer-title">TETAP TERHUBUNG</h4>
+
+              <p class="kn-footer-newsletter">
+                Berlangganan newsletter kami untuk mendapatkan berita terbaru
+                tentang Koding Next
+              </p>
+
+              <a href="#" class="kn-footer-btn"> Berlangganan </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

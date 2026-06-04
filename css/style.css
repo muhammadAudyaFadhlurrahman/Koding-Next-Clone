@@ -1,0 +1,1278 @@
+/* =========================
+   GLOBAL
+========================= */
+
+html {
+  cursor: url("../media/roket.png"), auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  color: #000;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar-custom {
+  width: 100%;
+  min-height: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 60px;
+
+  background: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.logo img {
+  width: 180px;
+  display: block;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.nav-row {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.nav-row a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-row a:hover {
+  color: #e43292;
+  text-decoration: underline;
+}
+
+.second-row {
+  justify-content: center;
+}
+
+/* =========================
+   RIGHT SECTION
+========================= */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.btn-free {
+  display: inline-block;
+
+  text-decoration: none;
+  background: #111;
+  color: #fff;
+
+  padding: 14px 24px;
+  border-radius: 8px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.btn-free:hover {
+  background: #e43292;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.lang-btn {
+  width: 80px;
+  height: 60px;
+
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 0.3s ease;
+}
+
+.lang-btn:hover {
+  border-color: #e43292;
+}
+
+.flag {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flag-small {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  margin-right: 10px;
+}
+
+/* =========================
+   DROPDOWN
+========================= */
+
+.dropdown-menu {
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* =========================
+   HAMBURGER
+========================= */
+
+.custom-toggler {
+  display: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  width: 2rem;
+  height: 2rem;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(0,0,0,1)' stroke-linecap='round' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* =========================
+   OFFCANVAS
+========================= */
+
+.mobile-menu {
+  width: 100vw !important;
+  max-width: 100vw !important;
+  height: 100vh;
+}
+
+.mobile-menu .offcanvas-header {
+  padding: 20px;
+}
+
+.mobile-menu .offcanvas-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  padding: 20px;
+}
+
+.mobile-menu .offcanvas-body a {
+  text-decoration: none;
+  color: #000;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.mobile-menu .btn-a {
+  color: #fff !important;
+}
+
+.mobile-menu .btn-free {
+  width: fit-content;
+}
+
+/* Hero Section */
+
+.hero {
+  min-height: 90vh;
+
+  background-image: url("../media/hero-section.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 80px;
+}
+
+.hero-left {
+  max-width: 700px;
+}
+
+.hero h5 {
+  color: white;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.hero h1 {
+  color: #ffeb3b;
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.hero p {
+  color: white;
+  font-size: 16px;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 30px;
+
+  padding: 18px 40px;
+
+  background: #ffeb3b;
+  color: black;
+
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+/* About Us */
+
+.about {
+  max-width: 1000px;
+  width: 100%;
+
+  padding: 0 20px;
+
+  font-family: "Poppins", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.about h1 span {
+  color: #e43292;
+}
+
+.about p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.8;
+}
+
+/* =========================
+   LEARN ABOUT
+========================= */
+
+.learn-about {
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.learn-about h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.learn-about h1 span {
+  color: #e43292;
+}
+
+/* Container Card */
+
+.learn-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Card */
+
+.learn-card {
+  flex: 1 1 220px;
+  max-width: 300px;
+
+  background: #fff;
+  border-radius: 16px;
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.3s ease;
+}
+
+.learn-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.learn-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.learn-card .card-body {
+  padding: 20px;
+}
+
+.learn-card p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Partner Section */
+.station-section {
+  padding: 80px 0;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.station-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+
+/* Container */
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+/* Track */
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+
+  width: max-content;
+
+  animation: scrollLogo 30s linear infinite;
+}
+
+/* Logo */
+
+.logo-track img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Detail Section */
+.stats-section {
+  background: #ffffff;
+}
+
+.stat-item h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #e63d9c; /* warna pink */
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #111;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* =========================
+   PARTNER SECTION
+========================= */
+
+.partner-section {
+  max-width: 1200px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.partner-section h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.partner-section h1 span {
+  color: #e43292;
+}
+
+/* Container Card */
+
+.partner-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Card */
+
+.partner-card {
+  width: 100%;
+  max-width: 280px;
+
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.partner-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 3px 1px rgba(0, 0, 0, 0.15);
+}
+
+.partner-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.partner-card .card-body {
+  padding: 20px;
+}
+
+.partner-card p {
+  margin: 0;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #333;
+}
+
+.school-partner-section {
+  padding: 80px 0;
+  /* background: #f5f5f5; */
+}
+
+.school-partner-title {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 60px;
+  color: #000;
+}
+
+.school-partner-title span {
+  color: #e83e9b;
+}
+
+.school-partner-logos {
+  margin-bottom: 80px;
+}
+
+.school-partner-logos img {
+  max-height: 60px;
+  width: auto;
+  display: block;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.school-partner-logos img:hover {
+  transform: scale(1.05);
+}
+
+.school-partner-description {
+  max-width: 1050px;
+  margin: auto;
+  text-align: center;
+}
+
+.school-partner-description p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.8;
+  color: #222;
+  font-weight: 400;
+}
+
+.school-partner-description span {
+  color: #e83e9b;
+  font-weight: 700;
+}
+
+.school-partner-btn {
+  display: inline-block;
+  margin-top: 40px;
+  background: #181818;
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.school-partner-btn:hover {
+  background: #e43292;
+  color: #fff;
+}
+
+/* =========================
+   TESTIMONIAL
+========================= */
+
+.testimonial-section {
+  max-width: 1200px;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.testimonial-section h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.testimonial-section h1 span {
+  color: #e43292;
+}
+
+/* Container */
+
+.testimonial-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+/* Card */
+
+.testimonial-card {
+  width: 100%;
+  max-width: 320px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Foto */
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* Nama */
+
+.testimonial-card h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Role */
+
+.testimonial-card small {
+  display: block;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Isi */
+
+.testimonial-card p {
+  margin: 0;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Modal Pendaftaran */
+/* ==========================
+   MODAL TRIAL
+========================== */
+
+.modal-content {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.trial-popup {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 700px;
+}
+
+.trial-left {
+  background: #f7f7f7;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 60px;
+}
+
+.trial-left h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.trial-left span {
+  color: #e43292;
+}
+
+.trial-right {
+  padding: 50px;
+}
+
+.trial-right label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.trial-right .form-control {
+  height: 50px;
+}
+
+.btn-submit {
+  width: 100%;
+
+  border: none;
+
+  background: #e43292;
+  color: white;
+
+  padding: 14px;
+
+  border-radius: 8px;
+
+  font-weight: 600;
+}
+
+.btn-submit:hover {
+  background: #cf1f83;
+}
+
+/* Footer */
+.kn-footer {
+  padding: 60px 0;
+  background: linear-gradient(
+    135deg,
+    #f8b6d6 0%,
+    #d8d6e8 35%,
+    #b7daf7 70%,
+    #d889f3 100%
+  );
+}
+
+.kn-footer-box {
+  background: #f6f6f6;
+  border-radius: 40px;
+  padding: 40px;
+}
+
+.kn-footer-logo {
+  width: 150px;
+  margin-bottom: 30px;
+}
+
+.kn-footer-title {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.kn-footer-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.kn-footer-menu li {
+  margin-bottom: 10px;
+}
+
+.kn-footer-menu a {
+  color: #222;
+  font-size: 15px;
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.kn-footer-menu a:hover {
+  color: #e83e9b;
+}
+
+.kn-footer-address {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #222;
+}
+
+.kn-footer-address strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.kn-footer-newsletter {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.kn-footer-btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  padding: 18px 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.kn-footer-btn:hover {
+  background: #e83e9b;
+  color: #fff;
+}
+
+/* Floating Button */
+.floating-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Animasi */
+
+@keyframes scrollLogo {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 1200px) {
+  .navbar-custom {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-container {
+    align-items: center;
+  }
+
+  .nav-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .custom-toggler {
+    display: block;
+  }
+
+  .navbar-custom {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+
+  .logo img {
+    width: 150px;
+  }
+
+  .navbar-custom {
+    flex-wrap: wrap;
+    padding: 15px 20px;
+  }
+
+  .custom-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+  }
+
+  .nav-container {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .nav-row {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .second-row {
+    margin-top: 15px;
+  }
+
+  .nav-right {
+    width: 100%;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 0 40px;
+  }
+
+  .hero-left {
+    max-width: 600px;
+  }
+
+  .hero h5 {
+    font-size: 22px;
+  }
+
+  .hero h1 {
+    font-size: 56px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .about {
+    max-width: 90%;
+  }
+
+  .about h1 {
+    font-size: 3rem;
+  }
+
+  .about p {
+    font-size: 1.25rem;
+  }
+
+  .partner-section {
+    padding: 0 20px;
+  }
+
+  .partner-section h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+
+  .partner-card {
+    width: 220px;
+  }
+
+  .testimonial-section {
+    padding: 0 20px;
+  }
+
+  .testimonial-section h1 {
+    font-size: 3rem;
+  }
+
+  .kn-footer {
+    padding: 50px 0;
+  }
+
+  .kn-footer-box {
+    padding: 40px 30px;
+    border-radius: 25px;
+  }
+
+  .kn-footer-title {
+    margin-top: 10px;
+  }
+
+  .kn-footer-logo {
+    width: 130px;
+  }
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .navbar-custom {
+    padding: 15px 20px;
+  }
+
+  .logo img {
+    width: 140px;
+  }
+
+  .nav-row {
+    gap: 15px;
+  }
+
+  .nav-row a {
+    font-size: 14px;
+  }
+
+  .btn-free {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .lang-btn {
+    width: 60px;
+    height: 60px;
+  }
+
+  .hero {
+    position: relative;
+    min-height: 80vh;
+
+    padding: 40px 20px;
+
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .hero-left {
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+  }
+
+  .hero h5 {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-btn {
+    margin-top: 25px;
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+
+  .about {
+    max-width: 100%;
+    padding: 0 15px;
+    gap: 20px;
+  }
+
+  .about h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+  }
+
+  .about p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .learn-about {
+    padding: 0 15px;
+  }
+
+  .learn-about h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .learn-card {
+    max-width: 100%;
+  }
+
+  .learn-card img {
+    height: 200px;
+  }
+
+  .stat-item h2 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+  }
+
+  .partner-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .partner-box {
+    gap: 20px;
+  }
+
+  .partner-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .partner-card img {
+    height: 200px;
+  }
+
+  .testimonial-section h1 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero h5 {
+    font-size: 16px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-btn {
+    width: 100%;
+    max-width: 280px;
+
+    padding: 14px;
+    font-size: 15px;
+  }
+
+  .about h1 {
+    font-size: 1.8rem;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+  }
+
+  .learn-about h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .learn-card .card-body {
+    padding: 15px;
+  }
+
+  .learn-card p {
+    font-size: 0.95rem;
+  }
+
+  .partner-section h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .partner-card {
+    max-width: 100%;
+  }
+
+  .partner-card .card-body {
+    padding: 15px;
+  }
+
+  .partner-card p {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  .testimonial-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==================================
+   GLOBAL RESPONSIVE SECTION SPACING
+================================== */
+
+section {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.partner-box,
+.learn-box,
+.testimonial-box {
+  justify-content: center;
+}
+
+.testimonial-card p {
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .station-section,
+  .school-partner-section,
+  .kn-footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .school-partner-description {
+    padding: 0 15px;
+  }
+
+  .school-partner-description p {
+    font-size: 1rem;
+  }
+
+  .kn-footer-box {
+    padding: 30px 20px;
+  }
+}
