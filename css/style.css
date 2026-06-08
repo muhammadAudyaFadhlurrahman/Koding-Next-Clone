@@ -2,9 +2,11 @@
    GLOBAL
 ========================= */
 
+/* Tugasnya Raffa */
 html {
   cursor: url("../media/roket.png"), auto;
 }
+/* Tugasnya Raffa */
 
 * {
   margin: 0;
@@ -16,6 +18,51 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #fff;
   color: #000;
+}
+
+/* Login */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  border: none;
+  border-radius: 20px;
+  padding: 35px;
+}
+
+.login-card h2 {
+  color: #1e3a5f;
+}
+
+.form-control {
+  height: 50px;
+}
+
+.input-group-text {
+  background: #1e3a5f;
+  color: white;
+  border: none;
+}
+
+.btn-login {
+  background: #1e3a5f;
+  color: white;
+  height: 50px;
+  border: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-login:hover {
+  background: #284d7a;
+  color: white;
 }
 
 /* =========================
@@ -374,8 +421,14 @@ body {
 
 .learn-card img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: 200px;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.learn-card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
 }
 
 .learn-card .card-body {
@@ -388,7 +441,7 @@ body {
   font-weight: 500;
 }
 
-/* Partner Section */
+/* Station Section */
 .station-section {
   padding: 80px 0;
   text-align: center;
@@ -516,6 +569,7 @@ body {
   color: #333;
 }
 
+/* School Partner */
 .school-partner-section {
   padding: 80px 0;
   /* background: #f5f5f5; */
@@ -534,19 +588,22 @@ body {
 }
 
 .school-partner-logos {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
 .school-partner-logos img {
-  max-height: 60px;
-  width: auto;
+  max-width: 120px;
+  max-height: 50px;
+  width: 40px;
+  height: 50px;
+  object-fit: contain;
   display: block;
   margin: auto;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .school-partner-logos img:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .school-partner-description {

@@ -1,0 +1,91 @@
+<h1>Untuk AL</h1>
+Note : Kode floating button nya ada di index.php line no. 425
+
+Pertanyaan dari Mr.
+1. Tolong jelaskan bagaimana langkah-langkah membuat kode floating button wa itu?
+Jawaban : kita buat di index.php atau index.html sebuah tag <a></a> yang didalam tag tersebut kita isikan attribut href nya menuju link wa yang dituju. Biasanya link tersebut dimulai dengan https://wa.me atau https://api.wa lalu setelah itu kita berikan nama class sesuai keinginan kita untuk diberikan styling.  jangan lupa untuk diberikan attribut target="_blank" agar membuka di tab baru pada browser. Dan kita juga bisa menggunakan bootstrap icon untuk icon whatsappnya.
+2. Bisa dijelaskan gak website kamu itu bertemakan apa dan terinspirasi dari mana?
+Jawaban : sesuai dengan pemikiran Al ya :)
+3. Tag HTML apa yang digunakan untuk membuat link?
+Jawaban : tag <a></a> digunakan untuk membuat hyperlink.
+
+<h1>Untuk Brian</h1>
+Note : untuk membuat sliding image ada di index.php line no. 276-287
+
+Pertanyaan dari Mr.
+1. Apa fungsi CSS?
+Jawaban : untuk memberikan styling
+Note : brian boleh jawab dengan pemahaman brian tentang fungsi CSS itu apa ya.....
+
+2. Brian boleh jelasin ga cara kerja kode gambar yang bergerak itu?
+Jawaban :
+Kode ini bekerja dengan cara mengambil data logo dari database menggunakan PHP. Setiap data yang ada di tabel `stations` akan ditampilkan menjadi gambar melalui tag `<img>`. Setelah semua gambar ditampilkan, CSS dengan `display: flex` membuat logo-logo tersebut berjajar ke samping dalam satu baris. Selanjutnya, CSS `animation: scrollLogo 30s linear infinite` membuat seluruh kumpulan logo bergerak dari kanan ke kiri secara otomatis. Karena animasinya menggunakan `infinite`, pergerakan logo akan terus berulang tanpa berhenti. Selain itu, aturan CSS seperti `height: 60px` dan `object-fit: contain` digunakan agar semua logo memiliki ukuran yang rapi dan tidak terlihat gepeng atau terpotong meskipun ukuran gambar aslinya berbeda-beda. Jadi, secara sederhana, PHP bertugas mengambil gambar dari database, sedangkan CSS bertugas mengatur tampilan dan membuat gambar-gambar tersebut bergerak di halaman website.
+
+3. Apa fungsi display: flex?
+Jawaban: Untuk mengatur tata letak elemen agar lebih mudah disejajarkan secara horizontal maupun vertikal.
+
+<h1>Untuk Reiki</h1>
+Note : kode form pendaftarannya ada di index.php line 434-517
+
+Pertanyaan dari Mr.
+1. Mengapa kedua pilihan kursus menggunakan atribut name="kursus" yang sama?
+Jawaban : Karena radio button yang memiliki nilai name yang sama akan dianggap sebagai satu grup. Dengan demikian pengguna hanya dapat memilih satu pilihan kursus, yaitu Koding Next atau RoboNext, bukan keduanya sekaligus.
+
+2. Apa fungsi dari tag <section></section>?
+Jawaban : Tag <section> digunakan untuk mengelompokkan sebuah bagian (section) dari konten yang memiliki tema atau tujuan tertentu di dalam halaman web.
+
+3. Bagaimana caranya saat tombol "GRATIS Kelas Pertama" diklik, form pendaftaran bisa muncul?
+Jawaban : Karena tombolnya punya atribut Bootstrap data-bs-toggle="modal" dan data-bs-target="#trialModal". Jadi waktu tombol diklik, Bootstrap akan mencari modal yang id-nya trialModal lalu menampilkannya di layar.
+
+<h1>Untuk Raffa</h1>
+Note : Untuk tugasnya raffa ada di style.css di class html dan untuk yang gambar di mitra kami itu Mr. belum sempat buat. Kalau mau diganti dengan fitur bisa menonton video aja.
+
+Pertanyaan dari Mr.
+1. Apa fungsi dari kode 
+html {
+  cursor: url("../media/roket.png"), auto;
+}
+di style.css?
+Jawaban : Kode ini digunakan untuk mengubah tampilan kursor mouse di website. Saat pengguna membuka halaman web, kursor yang biasanya berbentuk panah akan berubah menjadi gambar roket yang diambil dari file `roket.png` di folder `media`. Jika gambar roket tidak bisa ditemukan atau tidak didukung oleh browser, maka website akan otomatis menggunakan kursor bawaan komputer. Jadi, fungsi utama kode ini adalah membuat tampilan website menjadi lebih menarik dan unik dengan menggunakan kursor berbentuk roket.
+
+2. Apa fugsi tag span?
+Jawaban : Tag <span> digunakan untuk membungkus atau menandai sebagian kecil teks agar bisa diberi style atau diubah tampilannya menggunakan CSS maupun JavaScript. Berbeda dengan <div> yang biasanya digunakan untuk membuat sebuah blok atau bagian besar pada halaman, <span> hanya digunakan untuk elemen yang berada di dalam satu baris teks.
+
+3. Bagaimana cara kita bisa menampilkan gambar di website kita?
+
+Untuk menampilkan gambar di website, kita bisa menggunakan tag <img>. Tag ini memiliki atribut src yang digunakan untuk memanggil atau menunjukkan lokasi file gambar yang ingin ditampilkan. Misalnya:
+
+<img src="./media/kodingnext.png" alt="Logo Koding Next">
+
+Pada contoh di atas, browser akan mencari file kodingnext.png yang berada di dalam folder media, lalu menampilkannya di halaman website. Sedangkan atribut alt digunakan sebagai teks alternatif jika gambar gagal dimuat.
+
+Saat memanggil file, kita juga perlu memahami perbedaan antara ./ dan ../:
+
+./ berarti mencari file atau folder dari lokasi file yang sedang dibuka sekarang.
+../ berarti naik satu folder ke atas terlebih dahulu, lalu mencari file atau folder yang dituju.
+
+<h1>Ziyad</h1>
+Note : untuk ziyad, kalau ziyad sudah selesai membuat website nya ziyad sendiri, ziyad bisa ngambil kode nya Mr. dan di copy paste ke project nya ziyad yaa....
+
+Pertanyaan dari Mr.
+1. Kenapa di project ini kita menggunakan php?
+Jawaban : PHP digunakan supaya website bisa melakukan lebih banyak hal daripada hanya menampilkan tulisan dan gambar. Dengan PHP, website bisa mengambil data dari database, menyimpan data dari form, membuat sistem login, dan menampilkan informasi secara otomatis.
+
+Di project ini, PHP digunakan untuk mengambil data dari database lalu menampilkannya ke website. Jadi misalnya ada logo partner baru atau testimoni baru, kita cukup menambahkan datanya ke database tanpa perlu mengubah kode HTML satu per satu.
+
+2. Inspirasi ziyad membuat website ini dari mana sih?
+Jawaban : Sesuai jawaban nya ziyad yaa :)
+
+3. CSS yang kita gunakan kali ini termasuk jenis apa ziyad? Inline, Internal, atau Eksternal? lalu apa perbedaannya?
+Jawaban : CSS yang kita gunakan pada project ini termasuk CSS Eksternal (External CSS). Saya tahu karena pada bagian <head> terdapat kode:
+
+<link rel="stylesheet" href="./css/style.css" />
+
+Kode tersebut menghubungkan file style.css yang berada di folder css ke halaman website.
+CSS itu ada 3 jenis Mr.
+1. Inline CSS
+CSS ditulis langsung pada tag HTML menggunakan atribut style
+2. Internal CSS
+CSS ditulis di dalam tag <style> yang berada di file HTML.
+3. External CSS
+CSS ditulis di file terpisah, misalnya style.css, lalu dihubungkan ke HTML menggunakan tag <link>.

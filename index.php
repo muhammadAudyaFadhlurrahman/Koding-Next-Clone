@@ -1,3 +1,17 @@
+<?php
+include 'config/koneksi.php';
+
+$learnAbout = mysqli_query($conn, "SELECT * FROM learn_about");
+$stations = mysqli_query($conn, "SELECT * FROM stations");
+$partners = mysqli_query($conn, "SELECT * FROM partners");
+$schoolpartners = mysqli_query(
+    $conn,
+    "SELECT * FROM schoolpartners"
+);
+$testimonials = mysqli_query($conn, "SELECT * FROM testimonials");
+?>
+
+
 <!doctype html>
 <html lang="id">
   <head>
@@ -246,67 +260,16 @@
       id="learn-about"
       class="d-flex justify-content-center text-center py-5"
     >
-      <div class="learn-about">
-        <h1>Belajar Apa di <span>Koding Next?</span></h1>
-
-        <div class="learn-box">
-          <div class="learn-card">
-            <img src="./media/coding.jpg" alt="Coding" />
+    <div class="learn-box">
+    <?php while($row = mysqli_fetch_assoc($learnAbout)): ?>
+        <div class="learn-card">
+            <img src="./media/<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
             <div class="card-body">
-              <p>Programming & Coding</p>
+                <p><?php echo $row['title']; ?></p>
             </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/robotics.jpg" alt="Robotics" />
-            <div class="card-body">
-              <p>Robotics Engineering</p>
-            </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/ai.jpg" alt="AI" />
-            <div class="card-body">
-              <p>Artificial Intelligence</p>
-            </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/game.jpg" alt="Game Development" />
-            <div class="card-body">
-              <p>Game Development</p>
-            </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/web.jpg" alt="Web Development" />
-            <div class="card-body">
-              <p>Web Development</p>
-            </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/python.jpg" alt="Python" />
-            <div class="card-body">
-              <p>Python Programming</p>
-            </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/minecraft.jpg" alt="Minecraft" />
-            <div class="card-body">
-              <p>Minecraft Education</p>
-            </div>
-          </div>
-
-          <div class="learn-card">
-            <img src="./media/data.jpg" alt="Data Science" />
-            <div class="card-body">
-              <p>Data Science</p>
-            </div>
-          </div>
         </div>
-      </div>
+    <?php endwhile; ?>
+    </div>
     </section>
     <!-- Section Learn About End -->
 
@@ -314,26 +277,11 @@
     <section class="station-section">
       <h2>Terekam di:</h2>
 
-      <div class="logo-slider">
-        <div class="logo-track">
-          <!-- Logo Set 1 -->
-          <img src="./media/tvone.png" alt="TV One" />
-          <img src="./media/suara.png" alt="Suara" />
-          <img src="./media/sindo.png" alt="Sindo" />
-          <img src="./media/mommies.png" alt="Mommies Daily" />
-          <img src="./media/mediaindonesia.png" alt="Media Indonesia" />
-          <img src="./media/detik.png" alt="Detik" />
-          <img src="./media/jakarta.png" alt="Jakarta Post" />
-
-          <!-- Duplikat agar looping mulus -->
-          <img src="./media/tvone.png" alt="TV One" />
-          <img src="./media/suara.png" alt="Suara" />
-          <img src="./media/sindo.png" alt="Sindo" />
-          <img src="./media/mommies.png" alt="Mommies Daily" />
-          <img src="./media/mediaindonesia.png" alt="Media Indonesia" />
-          <img src="./media/detik.png" alt="Detik" />
-          <img src="./media/jakarta.png" alt="Jakarta Post" />
-        </div>
+    <div class="logo-track">
+<?php while($row = mysqli_fetch_assoc($stations)): ?>
+    <img src="./media/<?php echo $row['logo']; ?>" alt="<?php echo $row['name']; ?>">
+<?php endwhile; ?>
+</div>
       </div>
     </section>
     <!-- Station Section End -->
@@ -396,63 +344,16 @@
       <div class="partner-section">
         <h1><span>Mitra</span> kami:</h1>
 
-        <div class="partner-box">
-          <div class="partner-card">
-            <img src="./media/coding.jpg" alt="Coding" />
-            <div class="card-body">
-              <p>Programming & Coding</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/robotics.jpg" alt="Robotics" />
-            <div class="card-body">
-              <p>Robotics Engineering</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/ai.jpg" alt="AI" />
-            <div class="card-body">
-              <p>Artificial Intelligence</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/game.jpg" alt="Game Development" />
-            <div class="card-body">
-              <p>Game Development</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/web.jpg" alt="Web Development" />
-            <div class="card-body">
-              <p>Web Development</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/python.jpg" alt="Python" />
-            <div class="card-body">
-              <p>Python Programming</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/minecraft.jpg" alt="Minecraft" />
-            <div class="card-body">
-              <p>Minecraft Education</p>
-            </div>
-          </div>
-
-          <div class="partner-card">
-            <img src="./media/data.jpg" alt="Data Science" />
-            <div class="card-body">
-              <p>Data Science</p>
-            </div>
-          </div>
+<div class="partner-box">
+<?php while($row = mysqli_fetch_assoc($partners)): ?>
+    <div class="partner-card">
+        <img src="./media/<?php echo $row['logo']; ?>" alt="<?php echo $row['name']; ?>">
+        <div class="card-body">
+            <p><?php echo $row['name']; ?></p>
         </div>
+    </div>
+<?php endwhile; ?>
+</div>
       </div>
     </section>
     <!-- Partner Section End -->
@@ -462,12 +363,24 @@
       <div class="container">
         <h1 class="school-partner-title">Mitra <span>Sekolah</span> Kami</h1>
 
-        <div
-          class="row justify-content-center align-items-center g-5 school-partner-logos"
-        >
-          <div class="col-lg-2 col-md-3 col-4">
-            <img src="./media/hero-section.png" class="img-fluid" alt="" />
-          </div>
+<div
+  class="row justify-content-center align-items-center school-partner-logos"
+>
+
+<?php while($row = mysqli_fetch_assoc($schoolpartners)): ?>
+
+  <div class="col-lg-1 col-md-3 col-4 text-center">
+    <img
+      src="./media/<?php echo $row['logo']; ?>"
+      alt="<?php echo $row['name']; ?>"
+      class="img-fluid"
+      title="<?php echo $row['name']; ?>"
+    >
+  </div>
+
+<?php endwhile; ?>
+
+</div>
 
           <!-- Logo lainnya -->
         </div>
@@ -495,51 +408,21 @@
       <div class="testimonial-section">
         <h1><span>Apa Kata Mereka?</span></h1>
 
-        <div class="testimonial-box">
-          <div class="testimonial-card">
-            <img src="./media/user1.jpg" alt="User" />
-
-            <h4>Budi Santoso</h4>
-
-            <small>Orang Tua Murid</small>
-
-            <p>
-              Anak saya menjadi lebih percaya diri dan mulai tertarik dengan
-              dunia teknologi sejak belajar di Koding Next.
-            </p>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="./media/user2.jpg" alt="User" />
-
-            <h4>Siti Rahma</h4>
-
-            <small>Orang Tua Murid</small>
-
-            <p>
-              Kurikulumnya sangat menarik dan mudah dipahami. Mentor juga sangat
-              sabar dalam mengajar.
-            </p>
-          </div>
-
-          <div class="testimonial-card">
-            <img src="./media/user3.jpg" alt="User" />
-
-            <h4>Andi Wijaya</h4>
-
-            <small>Siswa Robotics</small>
-
-            <p>
-              Saya berhasil membuat proyek robot pertama saya dan mengikuti
-              kompetisi berkat bimbingan mentor.
-            </p>
-          </div>
-        </div>
+<div class="testimonial-box">
+<?php while($row = mysqli_fetch_assoc($testimonials)): ?>
+    <div class="testimonial-card">
+        <img src="./media/<?php echo $row['foto']; ?>" alt="<?php echo $row['nama']; ?>">
+        <h4><?php echo $row['nama']; ?></h4>
+        <small><?php echo $row['jabatan']; ?></small>
+        <p><?php echo $row['testimonial']; ?></p>
+    </div>
+<?php endwhile; ?>
+</div>
       </div>
     </section>
     <!-- Testimonial End -->
 
-    <!-- Floating Button -->
+    <!-- Floating Button WA tugasnya AL-->
     <a
       href="https://wa.me/6287873654451?text=Halo%20bisakah%20saya%20mendapatkan%20info%20lebih%20lanjut?"
       class="floating-btn"
